@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
-    
+    <link rel="icon" href="profile.png">
     <style>
         :root {
             --primary-color: #0EA5E9;
@@ -786,8 +786,9 @@
                 </h1>
 
                 <div class="text-xl md:text-2xl lg:text-3xl mb-6 h-12" data-aos="fade-up" data-aos-delay="400">
-                    <span class="typewriter">Web Developer</span>
-                </div>
+    <span id="typewriter" style="font-family: 'JetBrains Mono', monospace;"></span>
+</div>
+
 
                 <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="600">
                     BCA Computer Application student with expertise in web development, data analysis, and modern web technologies.
@@ -1381,6 +1382,43 @@
                 });
             }
         }
+
+
+const words = ["Data Analyst","Web Developer"];
+let i = 0;
+let j = 0;
+let currentWord = '';
+let isDeleting = false;
+const typeSpeed = 170;
+const deleteSpeed = 100;
+const delayBetweenWords = 1000;
+
+function type() {
+    const word = words[i];
+    
+    if (isDeleting) {
+        currentWord = word.substring(0, j--);
+    } else {
+        currentWord = word.substring(0, j++);
+    }
+
+    document.getElementById('typewriter').textContent = currentWord;
+
+    if (!isDeleting && j === word.length + 1) {
+        isDeleting = true;
+        setTimeout(type, delayBetweenWords);
+    } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+        setTimeout(type, typeSpeed);
+    } else {
+        setTimeout(type, isDeleting ? deleteSpeed : typeSpeed);
+    }
+}
+
+type();
+
+
 
         // Desktop navigation smooth scrolling
         document.querySelectorAll('.nav-link').forEach(anchor => {
