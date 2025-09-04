@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mainul Islam | Enhanced Portfolio</title>
+    <title>Mainul Islam | Portfolio</title>
     <meta name="description" content="Enhanced Web Developer Portfolio with Advanced Animations and Visual Effects">
 
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="icon" href="profile.png">
+    <link href="https://fonts.cdnfonts.com/css/magneto" rel="stylesheet">
+
     <style>
         :root {
             --primary-color: #0EA5E9;
@@ -46,60 +50,120 @@
             color: var(--text-primary);
             overflow-x: hidden;
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         /* Enhanced Background Animations */
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-20px) rotate(2deg); }
-            66% { transform: translateY(-10px) rotate(-1deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-20px) rotate(2deg);
+            }
+
+            66% {
+                transform: translateY(-10px) rotate(-1deg);
+            }
         }
 
         @keyframes floatReverse {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(20px) rotate(-2deg); }
-            66% { transform: translateY(10px) rotate(1deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(20px) rotate(-2deg);
+            }
+
+            66% {
+                transform: translateY(10px) rotate(1deg);
+            }
         }
 
         @keyframes pulse-glow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 0 20px rgba(14, 165, 233, 0.5),
-                           0 0 40px rgba(14, 165, 233, 0.3),
-                           0 0 60px rgba(14, 165, 233, 0.1);
+                    0 0 40px rgba(14, 165, 233, 0.3),
+                    0 0 60px rgba(14, 165, 233, 0.1);
             }
+
             50% {
                 box-shadow: 0 0 40px rgba(14, 165, 233, 0.8),
-                           0 0 80px rgba(14, 165, 233, 0.5),
-                           0 0 120px rgba(14, 165, 233, 0.3);
+                    0 0 80px rgba(14, 165, 233, 0.5),
+                    0 0 120px rgba(14, 165, 233, 0.3);
             }
         }
 
         @keyframes gradient-shift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         @keyframes rainbow-flow {
-            0% { background-position: 0% 50%; }
-            25% { background-position: 100% 50%; }
-            50% { background-position: 100% 0%; }
-            75% { background-position: 0% 0%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 100% 50%;
+            }
+
+            50% {
+                background-position: 100% 0%;
+            }
+
+            75% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
         }
 
         @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: var(--primary-color); }
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: var(--primary-color);
+            }
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Advanced Particle Background */
@@ -201,8 +265,8 @@
         .glass-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
-                        0 0 0 1px rgba(14, 165, 233, 0.5),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+                0 0 0 1px rgba(14, 165, 233, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
         /* Enhanced Header */
@@ -248,7 +312,7 @@
             overflow: hidden;
             font-family: 'JetBrains Mono', monospace;
             animation: typewriter 3s steps(13) 1s 1 normal both,
-                       blink-caret 1s step-end infinite;
+                blink-caret 1s step-end infinite;
         }
 
         /* Advanced Skill Cards */
@@ -297,7 +361,7 @@
             transform: translateY(-8px) scale(1.05) rotateX(10deg);
             border-color: var(--primary-color);
             box-shadow: 0 15px 35px rgba(14, 165, 233, 0.4),
-                        0 5px 15px rgba(0, 0, 0, 0.3);
+                0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Enhanced Project Cards */
@@ -313,7 +377,7 @@
         .project-card:hover {
             transform: translateY(-20px) rotateX(5deg) rotateY(5deg);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5),
-                        0 0 0 1px rgba(14, 165, 233, 0.5);
+                0 0 0 1px rgba(14, 165, 233, 0.5);
         }
 
         .project-card .project-overlay {
@@ -358,7 +422,7 @@
             background: var(--primary-color);
             border-radius: 50%;
             box-shadow: 0 0 20px rgba(14, 165, 233, 0.8),
-                        0 0 40px rgba(14, 165, 233, 0.4);
+                0 0 40px rgba(14, 165, 233, 0.4);
             animation: pulse-glow 2s ease-in-out infinite;
         }
 
@@ -436,7 +500,7 @@
         .btn-primary:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 15px 30px rgba(14, 165, 233, 0.5),
-                        0 0 20px rgba(14, 165, 233, 0.3);
+                0 0 20px rgba(14, 165, 233, 0.3);
         }
 
         .btn-outline {
@@ -515,7 +579,7 @@
             color: #93C5FD;
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3),
-                        0 0 20px rgba(14, 165, 233, 0.2);
+                0 0 20px rgba(14, 165, 233, 0.2);
         }
 
         .btn-source i {
@@ -542,7 +606,7 @@
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1),
-                        0 0 20px rgba(14, 165, 233, 0.2);
+                0 0 20px rgba(14, 165, 233, 0.2);
             background: rgba(255, 255, 255, 0.08);
             transform: translateY(-2px);
         }
@@ -637,7 +701,9 @@
                 height: 120px;
             }
 
-            .orb-1, .orb-2, .orb-3 {
+            .orb-1,
+            .orb-2,
+            .orb-3 {
                 display: none;
             }
 
@@ -705,35 +771,48 @@
     <header class="glass-header sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent" style="font-family: Freestyle Script; font-size: 40px; font-style: inherit;">
-                    MAINUL 
+                <div class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent"
+                    style="font-family: 'Magneto', sans-serif; font-size: 45px; font-style: italic;">
+                    Mainul
                 </div>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
+                    <a href="#home"
+                        class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
                         Home
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#about" class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
+                    <a href="#about"
+                        class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
                         About
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#skills" class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
+                    <a href="#skills"
+                        class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
                         Skills
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#experience" class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
+                    <a href="#experience"
+                        class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
                         Experience
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#projects" class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
+                    <a href="#projects"
+                        class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
                         Projects
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#contact" class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
+                    <a href="#contact"
+                        class="nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group">
                         Contact
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                 </div>
 
@@ -748,22 +827,28 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 rounded-lg glass-card">
                 <div class="flex flex-col space-y-2 p-4">
-                    <a href="#home" class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
+                    <a href="#home"
+                        class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
                         Home
                     </a>
-                    <a href="#about" class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
+                    <a href="#about"
+                        class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
                         About
                     </a>
-                    <a href="#skills" class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
+                    <a href="#skills"
+                        class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
                         Skills
                     </a>
-                    <a href="#experience" class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
+                    <a href="#experience"
+                        class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
                         Experience
                     </a>
-                    <a href="#projects" class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
+                    <a href="#projects"
+                        class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
                         Projects
                     </a>
-                    <a href="#contact" class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
+                    <a href="#contact"
+                        class="mobile-nav-link text-gray-300 hover:text-blue-400 transition-all duration-300 relative group py-2">
                         Contact
                     </a>
                 </div>
@@ -772,35 +857,45 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+    <section id="home"
+        class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
         <div class="container mx-auto px-4 text-center relative z-10">
             <div data-aos="fade-up" data-aos-duration="1000">
-                <div class="profile-container w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 p-1">
-                    <div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
-                        <img src="profile.png" style="height: 100%;width: 100%; border-radius: 50%;" alt="Mainul Islam Profile">
+                <div
+                    class="profile-container w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 p-1">
+                    <div
+                        class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
+                        <!-- <img src="profile.png" style="height: 100%;width: 100%; border-radius: 50%;background-position: center;"
+                            alt="Mainul Islam Profile"> -->
+                            <div class="profile-img" style="height: 100%;width: 100%; border-radius: 50%; background-image: url('profile.png'); background-size: cover; background-position: top;"></div>
                     </div>
                 </div>
 
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4" data-aos="fade-up" data-aos-delay="200">
-                    Hi, I'm <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Mainul Islam</span>
+                    Hi, I'm <span
+                        class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Mainul
+                        Islam</span>
                 </h1>
 
-                <div class="text-xl md:text-2xl lg:text-3xl mb-6 h-12" data-aos="fade-up" data-aos-delay="400">
-    <span id="typewriter" style="font-family: 'JetBrains Mono', monospace;"></span>
-</div>
+                <div class="text-xl md:text-2xl lg:text-3xl mb-6 h-12" data-aos="fade-up" data-aos-delay="200">
+                    <span class="typewriter" id="typewriter" style="font-family: 'JetBrains Mono', monospace;"></span>
+                </div>
 
 
                 <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="600">
-                    BCA Computer Application student with expertise in web development, data analysis, and modern web technologies.
-                    Creating innovative digital solutions and responsive user experiences.
+                    BCA Computer Application student with expertise in data analysis, web development and modern web
+                    technologies.
+                    Creating responsive user experiences. Turning complex data into actionable insights.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="800">
-                    <a href="#projects" class="btn-primary text-white" style="display: flex;justify-content: center;align-items: center;">
+                    <a href="#projects" class="btn-primary text-white"
+                        style="display: flex;justify-content: center;align-items: center;">
                         <i class="fas fa-rocket"></i>
                         View My Work
                     </a>
-                    <a href="#contact" class="btn-outline text-blue-400" style="display: flex;justify-content: center;align-items: center;">
+                    <a href="#contact" class="btn-outline text-blue-400"
+                        style="display: flex;justify-content: center;align-items: center; scroll-behavior: smooth;">
                         <i class="fas fa-envelope"></i>
                         Get In Touch
                     </a>
@@ -827,7 +922,8 @@
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">Who I Am</h3>
                                 <p class="text-gray-300">
-                                    I'm a 2nd-year BCA Computer Application student at Kotibarsha Institute of Technology and Management, West Bengal. I have a strong passion for web development and data analysis.
+                                    I'm a 2nd-year BCA Computer Application student at Kotibarsha Institute of
+                                    Technology and Management, West Bengal. I have a strong passion for data analysis and web development.
                                 </p>
                             </div>
                         </div>
@@ -839,17 +935,26 @@
                             <div>
                                 <h3 class="text-xl font-semibold mb-2 text-white">My Expertise</h3>
                                 <p class="text-gray-300">
-                                    My technical expertise includes modern web technologies like HTML, CSS, JavaScript, Python, and frameworks like Tailwind CSS and Bootstrap for creating responsive and interactive web applications.
+                                    My technical expertise includes modern web technologies like HTML, CSS, JavaScript
+                                    and frameworks like Tailwind CSS and Bootstrap for creating responsive and
+                                    interactive web applications and data analysis technologies and programming
+                                    languages like Power BI, Excel, Python and Python
+                                    libraries (Pandas & NumPy)
+
                                 </p>
                             </div>
                         </div>
 
                         <div class="glass-card p-5">
                             <p class="text-gray-300 mb-4">
-                                I've gained hands-on experience through internships—creating Power BI dashboards at NullClass working as a Data Analyst Intern. I'm constantly looking for new challenges and real-world projects to improve my skills.
+                                I've gained hands-on experience through internships—creating Power BI dashboards at
+                                NullClass working as a Data Analyst Intern. I'm constantly looking for new challenges
+                                and real-world projects to improve my skills.
                             </p>
                             <p class="text-gray-300">
-                                I enjoy solving real-world problems and constantly pushing my limits. If you're interested in collaborating or just want to connect, feel free to check out my LinkedIn or contact me directly.
+                                I enjoy solving real-world problems and constantly pushing my limits. If you're
+                                interested in collaborating or just want to connect, feel free to check out my LinkedIn
+                                or contact me directly.
                             </p>
                         </div>
                     </div>
@@ -858,7 +963,7 @@
                 <div data-aos="fade-left" data-aos-duration="300">
                     <div class="grid grid-cols-2 gap-6">
                         <div class="stats-card p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="text-3xl font-bold text-blue-400 mb-2 counter" data-target="3">3+</div>
+                            <div class="text-3xl font-bold text-blue-400 mb-2">3+</div>
                             <div class="text-gray-300">Projects Done</div>
                         </div>
                         <div class="stats-card p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-delay="200">
@@ -866,11 +971,11 @@
                             <div class="text-gray-300">Current Degree</div>
                         </div>
                         <div class="stats-card p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="text-3xl font-bold text-blue-400 mb-2 counter" data-target="1">1</div>
+                            <div class="text-3xl font-bold text-blue-400 mb-2">1</div>
                             <div class="text-gray-300">Active Internship</div>
                         </div>
                         <div class="stats-card p-6 rounded-lg text-center" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="text-3xl font-bold text-blue-400 mb-2 counter" data-target="14">14+</div>
+                            <div class="text-3xl font-bold text-blue-400 mb-2">14+</div>
                             <div class="text-gray-300">Skills Mastered</div>
                         </div>
                     </div>
@@ -970,12 +1075,19 @@
                             August 2025 - October 2025
                         </div>
                         <p class="text-gray-300 mb-4">
-                            Designed and developed dynamic Power BI dashboards to analyze Twitter data and deliver actionable insights, driving data-informed decision-making.
+                            Designed and developed dynamic Power BI dashboards to analyze Twitter data and deliver
+                            actionable insights, driving data-informed decision-making.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-600 bg-opacity-20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-600 border-opacity-30">Power BI</span>
-                            <span class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-3 py-1 rounded-full border border-green-600 border-opacity-30">Data Analysis</span>
-                            <span class="bg-purple-600 bg-opacity-20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-600 border-opacity-30">Twitter Data</span>
+                            <span
+                                class="bg-blue-600 bg-opacity-20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-600 border-opacity-30">Power
+                                BI</span>
+                            <span
+                                class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-3 py-1 rounded-full border border-green-600 border-opacity-30">Data
+                                Analysis</span>
+                            <span
+                                class="bg-purple-600 bg-opacity-20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-600 border-opacity-30">Twitter
+                                Data</span>
                         </div>
                     </div>
                 </div>
@@ -995,27 +1107,34 @@
                 <!-- Project 1 -->
                 <div class="project-card rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-overlay"></div>
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative">
+                    <div
+                        class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative">
                         <i class="fas fa-chart-area text-white text-6xl"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-xl font-bold text-white">Sales Data Analysis</h3>
-                            <span class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded-full">Completed</span>
+                            <span
+                                class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded-full">Completed</span>
                         </div>
                         <p class="text-gray-300 mb-4">
-                            Created a sales dataset and analyzed it using Pandas and Excel to derive meaningful business insights.
+                            Created a sales dataset and analyzed it using Pandas and Excel to derive meaningful business
+                            insights.
                         </p>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-300 mb-2">Tech Stack:</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-600 bg-opacity-20 text-blue-300 text-xs px-2 py-1 rounded">Python</span>
-                                <span class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded">Pandas</span>
-                                <span class="bg-yellow-600 bg-opacity-20 text-yellow-300 text-xs px-2 py-1 rounded">Excel</span>
+                                <span
+                                    class="bg-blue-600 bg-opacity-20 text-blue-300 text-xs px-2 py-1 rounded">Python</span>
+                                <span
+                                    class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded">Pandas</span>
+                                <span
+                                    class="bg-yellow-600 bg-opacity-20 text-yellow-300 text-xs px-2 py-1 rounded">Excel</span>
                             </div>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://github.com/Mainul-21/Sales-Data-Analysis" target="_blank" rel="noopener noreferrer" class="btn-source">
+                            <a href="https://github.com/Mainul-21/Sales-Data-Analysis" target="_blank"
+                                rel="noopener noreferrer" class="btn-source">
                                 <i class="fab fa-github"></i>
                                 <span>Source Code</span>
                             </a>
@@ -1026,28 +1145,38 @@
                 <!-- Project 2 -->
                 <div class="project-card rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-overlay"></div>
-                    <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center relative overflow-hidden">
-                        <img src="https://www.shutterstock.com/image-photo/zomato-food-delivery-app-on-260nw-2173930231.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Zomato">
+                    <div
+                        class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://www.shutterstock.com/image-photo/zomato-food-delivery-app-on-260nw-2173930231.jpg"
+                            style="width: 100%; height: 100%; object-fit: cover;" alt="Zomato">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-xl font-bold text-white">Zomato Insights Dashboard</h3>
-                            <span class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded-full">Completed</span>
+                            <span
+                                class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded-full">Completed</span>
                         </div>
                         <p class="text-gray-300 mb-4">
-                            Created a comprehensive Zomato dataset analysis and visualization using Python Pandas, Excel, and Power BI.
+                            Created a comprehensive Zomato dataset analysis and visualization using Python Pandas,
+                            Excel, and Power BI.
                         </p>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-300 mb-2">Tech Stack:</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-600 bg-opacity-20 text-blue-300 text-xs px-2 py-1 rounded">Python</span>
-                                <span class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded">Pandas</span>
-                                <span class="bg-yellow-600 bg-opacity-20 text-yellow-300 text-xs px-2 py-1 rounded">Excel</span>
-                                <span class="bg-purple-600 bg-opacity-20 text-purple-300 text-xs px-2 py-1 rounded">Power BI</span>
+                                <span
+                                    class="bg-blue-600 bg-opacity-20 text-blue-300 text-xs px-2 py-1 rounded">Python</span>
+                                <span
+                                    class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded">Pandas</span>
+                                <span
+                                    class="bg-yellow-600 bg-opacity-20 text-yellow-300 text-xs px-2 py-1 rounded">Excel</span>
+                                <span
+                                    class="bg-purple-600 bg-opacity-20 text-purple-300 text-xs px-2 py-1 rounded">Power
+                                    BI</span>
                             </div>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://github.com/Mainul-21/Zomato-Insights-Dashboard" target="_blank" rel="noopener noreferrer" class="btn-source">
+                            <a href="https://github.com/Mainul-21/Zomato-Insights-Dashboard" target="_blank"
+                                rel="noopener noreferrer" class="btn-source">
                                 <i class="fab fa-github"></i>
                                 <span>Source Code</span>
                             </a>
@@ -1058,28 +1187,38 @@
                 <!-- Project 3 -->
                 <div class="project-card rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-overlay"></div>
-                    <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center relative overflow-hidden">
-                        <img src="https://cdn.nullclass.com/courses/43d25dc1-1668-4312-8fb6-7e6c2841af97.jpeg" style="width: 100%; height: 100%; object-fit: cover;" alt="Twitter Analysis">
+                    <div
+                        class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://cdn.nullclass.com/courses/43d25dc1-1668-4312-8fb6-7e6c2841af97.jpeg"
+                            style="width: 100%; height: 100%; object-fit: cover;" alt="Twitter Analysis">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-xl font-bold text-white">Twitter Analysis</h3>
-                            <span class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded-full">Completed</span>
+                            <span
+                                class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded-full">Completed</span>
                         </div>
                         <p class="text-gray-300 mb-4">
-                            Created a Twitter dataset and analyzed it using Python Pandas, Excel, and Power BI for social media insights.
+                            Created a Twitter dataset and analyzed it using Python Pandas, Excel, and Power BI for
+                            social media insights.
                         </p>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-300 mb-2">Tech Stack:</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-600 bg-opacity-20 text-blue-300 text-xs px-2 py-1 rounded">Python</span>
-                                <span class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded">Pandas</span>
-                                <span class="bg-purple-600 bg-opacity-20 text-purple-300 text-xs px-2 py-1 rounded">Power BI</span>
-                                <span class="bg-yellow-600 bg-opacity-20 text-yellow-300 text-xs px-2 py-1 rounded">Excel</span>
+                                <span
+                                    class="bg-blue-600 bg-opacity-20 text-blue-300 text-xs px-2 py-1 rounded">Python</span>
+                                <span
+                                    class="bg-green-600 bg-opacity-20 text-green-300 text-xs px-2 py-1 rounded">Pandas</span>
+                                <span
+                                    class="bg-purple-600 bg-opacity-20 text-purple-300 text-xs px-2 py-1 rounded">Power
+                                    BI</span>
+                                <span
+                                    class="bg-yellow-600 bg-opacity-20 text-yellow-300 text-xs px-2 py-1 rounded">Excel</span>
                             </div>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://github.com/Mainul-21/NullClass-Twitter-Analysis-Deshboard" target="_blank" rel="noopener noreferrer" class="btn-source">
+                            <a href="https://github.com/Mainul-21/NullClass-Twitter-Analysis-Deshboard" target="_blank"
+                                rel="noopener noreferrer" class="btn-source">
                                 <i class="fab fa-github"></i>
                                 <span>Source Code</span>
                             </a>
@@ -1101,7 +1240,8 @@
             <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 <!-- Contact Form -->
                 <div class="glass-card p-8" data-aos="fade-right" data-aos-duration="800">
-                    <h3 class="text-2xl font-bold mb-6 text-white" style="display: flex; justify-content: center;">Send Me a Message</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-white" style="display: flex; justify-content: center;">Send
+                        Me a Message</h3>
                     <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                         <!-- Web3Forms Access Key -->
                         <input type="hidden" name="access_key" value="84e4c158-2dda-4768-a839-10acd92efb02">
@@ -1110,28 +1250,33 @@
 
                         <div>
                             <label class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                            <input type="text" name="name" id="user-name" required class="form-input w-full" placeholder="John Doe">
+                            <input type="text" name="name" id="user-name" required class="form-input w-full"
+                                placeholder="John Doe">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
-                            <input type="email" name="email" id="user-email" required class="form-input w-full" placeholder="john@example.com">
+                            <input type="email" name="email" id="user-email" required class="form-input w-full"
+                                placeholder="john@example.com">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
-                            <input type="text" name="subject_line" id="user-subject" required class="form-input w-full" placeholder="Project Collaboration">
+                            <input type="text" name="subject_line" id="user-subject" required class="form-input w-full"
+                                placeholder="Project Collaboration">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                            <textarea rows="5" name="message" id="user-message" required class="form-input w-full" placeholder="Hello, I'd like to discuss..."></textarea>
+                            <textarea rows="5" name="message" id="user-message" required class="form-input w-full"
+                                placeholder="Hello, I'd like to discuss..."></textarea>
                         </div>
 
                         <!-- Honeypot for spam protection -->
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                        <button type="submit" id="submit-btn" class="btn-primary w-full text-white" style="display: flex;justify-content: center;align-items: center;">
+                        <button type="submit" id="submit-btn" class="btn-primary w-full text-white"
+                            style="display: flex;justify-content: center;align-items: center;">
                             <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
@@ -1143,62 +1288,78 @@
                     <div>
                         <h3 class="text-2xl font-bold mb-6 text-white">Let's Connect</h3>
                         <p class="text-gray-300 mb-8">
-                            Feel free to reach out if you're interested in working together, have questions about my projects, or just want to connect. I'm always open to discussing new opportunities and collaborations.
+                            Feel free to reach out if you're interested in working together, have questions about my
+                            projects, or just want to connect. I'm always open to discussing new opportunities and
+                            collaborations.
                         </p>
                     </div>
 
                     <div class="space-y-6">
-                        <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="social-link">
-                                <i class="fab fa-linkedin text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-white">LinkedIn</h4>
-                                <a href="https://www.linkedin.com/in/mainul-islam-984393337" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-blue-400 transition-colors">
-                                    linkedin.com/in/mainul-islam-984393337
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="social-link">
-                                <i class="fab fa-github text-xl"></i>
+                        <a href="https://www.linkedin.com/in/mainul-islam-984393337" target="_blank"
+                            rel="noopener noreferrer" class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="social-link">
+                                        <i class="fab fa-linkedin text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-white">LinkedIn</h4>
+                                        linkedin.com/in/mainul-islam-984393337
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-white">GitHub</h4>
-                                <a href="https://github.com/Mainul-21" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-blue-400 transition-colors">
-                                    github.com/Mainul-21
-                                </a>
+                        </a>
+                        <br>
+                        <a href="https://github.com/Mainul-21" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="social-link">
+                                        <i class="fab fa-github text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-white">GitHub</h4>
+                                        github.com/Mainul-21
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+                        <br>
+                        <a href="mailto:mainulmti397@gmail.com" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="social-link">
+                                        <i class="fas fa-envelope text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-white">Email</h4>
+                                        mainulmti397@gmail.com
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <br>
+                        <a href="tel:+918609752814" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="social-link">
+                                        <i class="fas fa-phone text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-white">Phone</h4>
+                                        +91 8609752814
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
 
-                        <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="social-link">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-white">Email</h4>
-                                <a href="mailto:mainulmti397@gmail.com" class="text-gray-300 hover:text-blue-400 transition-colors">
-                                    mainulmti397@gmail.com
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="400">
-                            <div class="social-link">
-                                <i class="fas fa-phone text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-white">Phone</h4>
-                                <a href="tel:+918609752814" class="text-gray-300 hover:text-blue-400 transition-colors">
-                                    +91 8609752814
-                                </a>
-                            </div>
-                        </div>
                     </div>
 
                     <!-- Quote -->
-                    <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
                         <blockquote class="text-gray-300 italic text-lg">
                             "Arise, awake, and stop not till the goal is reached."
                         </blockquote>
@@ -1218,13 +1379,16 @@
                 </div>
 
                 <div class="flex space-x-4">
-                    <a href="https://www.linkedin.com/in/mainul-islam-984393337" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://www.linkedin.com/in/mainul-islam-984393337" target="_blank"
+                        rel="noopener noreferrer" class="social-link">
                         <i class="fab fa-linkedin text-lg"></i>
                     </a>
-                    <a href="https://github.com/Mainul-21" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://github.com/Mainul-21" target="_blank" rel="noopener noreferrer"
+                        class="social-link">
                         <i class="fab fa-github text-lg"></i>
                     </a>
-                    <a href="https://x.com/Mainul397?t=_JBbxyZkrkJKxj-yeTmUzw&s=08" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://x.com/Mainul397?t=_JBbxyZkrkJKxj-yeTmUzw&s=08" target="_blank"
+                        rel="noopener noreferrer" class="social-link">
                         <i class="fab fa-twitter text-lg"></i>
                     </a>
                     <a href="mailto:mainulmti397@gmail.com" class="social-link">
@@ -1375,7 +1539,7 @@
             if (element) {
                 const headerHeight = document.querySelector('header').offsetHeight;
                 const elementPosition = element.offsetTop - headerHeight;
-                
+
                 window.scrollTo({
                     top: elementPosition,
                     behavior: 'smooth'
@@ -1384,39 +1548,39 @@
         }
 
 
-const words = ["Data Analyst","Web Developer"];
-let i = 0;
-let j = 0;
-let currentWord = '';
-let isDeleting = false;
-const typeSpeed = 170;
-const deleteSpeed = 100;
-const delayBetweenWords = 1000;
+        const words = ["Data Analyst", "Web Developer"];
+        let i = 0;
+        let j = 0;
+        let currentWord = '';
+        let isDeleting = false;
+        const typeSpeed = 170;
+        const deleteSpeed = 100;
+        const delayBetweenWords = 1000;
 
-function type() {
-    const word = words[i];
-    
-    if (isDeleting) {
-        currentWord = word.substring(0, j--);
-    } else {
-        currentWord = word.substring(0, j++);
-    }
+        function type() {
+            const word = words[i];
 
-    document.getElementById('typewriter').textContent = currentWord;
+            if (isDeleting) {
+                currentWord = word.substring(0, j--);
+            } else {
+                currentWord = word.substring(0, j++);
+            }
 
-    if (!isDeleting && j === word.length + 1) {
-        isDeleting = true;
-        setTimeout(type, delayBetweenWords);
-    } else if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % words.length;
-        setTimeout(type, typeSpeed);
-    } else {
-        setTimeout(type, isDeleting ? deleteSpeed : typeSpeed);
-    }
-}
+            document.getElementById('typewriter').textContent = currentWord;
 
-type();
+            if (!isDeleting && j === word.length + 1) {
+                isDeleting = true;
+                setTimeout(type, delayBetweenWords);
+            } else if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+                setTimeout(type, typeSpeed);
+            } else {
+                setTimeout(type, isDeleting ? deleteSpeed : typeSpeed);
+            }
+        }
+
+        type();
 
 
 
@@ -1434,13 +1598,13 @@ type();
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = this.getAttribute('href');
-                
+
                 // Close mobile menu
                 mobileMenu.classList.add('hidden');
                 const icon = mobileMenuBtn.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
-                
+
                 // Smooth scroll to target
                 setTimeout(() => {
                     smoothScrollTo(target);
@@ -1551,7 +1715,7 @@ type();
 
                 // Error with SweetAlert2
                 await Swal.fire({
-                    title: 'Oops! Something went wrong 😅',
+                    title: 'Oops! Something went wrong ',
                     text: 'There was an error sending your message. Please try again or contact me directly.',
                     icon: 'error',
                     background: 'rgba(15, 23, 42, 0.95)',
@@ -1571,7 +1735,7 @@ type();
                     submitBtn.innerHTML = originalText;
                     submitBtn.classList.remove('error-state');
                     submitBtn.disabled = false;
-                }, 3000);
+                }, 2000);
             }
         });
 
